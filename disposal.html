@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Uganda Medical Stores - Medicine Disposal</title>
+</head>
+
+<body bgcolor="#E6F0FA" text="#003366">
+    
+    <table width="1000" align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0">
+        
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#006633" align="center" height="100">
+                <font size="5" face="Arial" color="white"><b>UGANDA MEDICAL STORES</b></font><br>
+                <font size="2" face="Arial" color="#FFCC99">Medicine Expiry Tracking System</font>
+            </td>
+        </tr>
+        
+        <!-- Navigation -->
+        <tr>
+            <td bgcolor="#FFCC99" align="center" height="40">
+                <a href="index.html">HOME</a> | <a href="hospitals.html">HOSPITALS</a> | <a href="medicines.html">MEDICINES</a> | 
+                <a href="batches.html">BATCHES</a> | <a href="dispense.html">DISPENSE</a> | <a href="transfer.html">TRANSFER</a> | 
+                <a href="alerts.html">ALERTS</a> | <a href="disposal.html">DISPOSAL</a> | <a href="reports.html">REPORTS</a>
+            </td>
+        </tr>
+        
+        <!-- Page Title -->
+        <tr>
+            <td bgcolor="#F0F7FF" align="center" height="60">
+                <font size="4" face="Arial"><b> MEDICINE DISPOSAL RECORD</b></font><br>
+                <font size="2">Record disposal of expired or damaged medicines - NEMA & Ministry of Health Compliance</font>
+            </td>
+        </tr>
+        
+        <!-- Form Content -->
+        <tr>
+            <td bgcolor="white" valign="top" height="500">
+                
+                <!-- Warning Notice -->
+                <table width="90%" align="center" border="0" cellpadding="8" bgcolor="#FFE6E6">
+                    <tr>
+                        <td align="center"><font size="2" color="#CC3300"><b> REGULATORY COMPLIANCE:</b> All medicine disposal must follow NEMA guidelines and Ministry of Health regulations. Records kept for 5 years for audit purposes.</font></td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <table width="80%" align="center" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFF8E7">
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#006633"><font color="white" size="4"><b>DISPOSAL RECORD FORM</b></font></td>
+                    </tr>
+                    <form action="#" method="POST">
+                        <tr>
+                            <td colspan="2" bgcolor="#FFF0E0" align="center"><font size="2"><b> BATCH INFORMATION</b></font></td>
+                        </tr>
+                        <tr>
+                            <td width="40%"><b>Select Expired Batch *</b></td>
+                            <td>
+                                <select name="batch_id">
+                                    <option>UMS-B2023-156 - Amoxicillin (Expired: 2023-11-15, Qty: 200)</option>
+                                    <option>UMS-B2023-189 - Paracetamol (Expired: 2023-12-10, Qty: 500)</option>
+                                    <option>UMS-B2023-201 - ORS Sachets (Expired: 2024-01-05, Qty: 2,000)</option>
+                                    <option>UMS-B2023-145 - Cotrimoxazole (Expired: 2023-10-30, Qty: 1,200)</option>
+                                </select>
+                             </td>
+                         </tr>
+                         <tr>
+                            <td><b>Medicine Name</b></td>
+                            <td><input type="text" name="medicine" size="50" value="Amoxicillin 250mg Capsules" readonly></td>
+                         </tr>
+                         <tr>
+                            <td><b>Manufacturer Batch No</b></td>
+                            <td><input type="text" name="manuf_batch" size="40" value="AMX-2023-05" readonly></td>
+                         </tr>
+                         <tr>
+                            <td><b>Expiry Date</b></td>
+                            <td><input type="text" name="expiry_date" size="20" value="2023-11-15" readonly> <font color="#CC3300"><b>EXPIRED</b></font></td>
+                         </tr>
+                         <tr>
+                            <td><b>Original Quantity</b></td>
+                            <td><input type="text" name="original_qty" size="20" value="1,000 units" readonly></td>
+                         </tr>
+                         <tr>
+                            <td><b>Remaining Quantity</b></td>
+                            <td><input type="text" name="remaining_qty" size="20" value="200 units" readonly></td>
+                         </tr>
+                         
+                         <tr>
+                            <td colspan="2" bgcolor="#FFF0E0" align="center"><font size="2"><b> DISPOSAL DETAILS</b></font></td>
+                         </tr>
+                         <tr>
+                            <td><b>Quantity to Dispose *</b></td>
+                            <td><input type="text" name="disposal_qty" size="20" value="200" placeholder="Number of units"></td>
+                         </tr>
+                         <tr>
+                            <td><b>Disposal Method *</b></td>
+                            <td>
+                                <select name="disposal_method">
+                                    <option>Incineration (High Temperature - Recommended)</option>
+                                    <option>Chemical Treatment/Neutralization</option>
+                                    <option>Return to Manufacturer</option>
+                                    <option>Secure Landfill (Non-hazardous only)</option>
+                                    <option>Autoclave/Sterilization</option>
+                                </select>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td><b>Disposal Date *</b></td>
+                            <td><input type="text" name="disposal_date" size="20" value="2024-03-28" placeholder="YYYY-MM-DD"></td>
+                         </tr>
+                         <tr>
+                            <td><b>Disposal Facility/Vendor</b></td>
+                            <td>
+                                <select name="vendor">
+                                    <option>NEMA Certified Incinerator - Kampala</option>
+                                    <option>NEMA Certified Incinerator - Jinja</option>
+                                    <option>NEMA Certified Incinerator - Mbarara</option>
+                                    <option>Manufacturer Return Program</option>
+                                    <option>On-site Disposal (Health Facility)</option>
+                                </select>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td><b>Disposal Certificate No.</b></td>
+                            <td><input type="text" name="certificate_no" size="40" placeholder="e.g., NEMA-DIS-2024-001"></td>
+                         </tr>
+                         <tr>
+                            <td><b>Reason for Disposal *</b></td>
+                            <td>
+                                <select name="disposal_reason">
+                                    <option>Expired Beyond Use Date</option>
+                                    <option>Damaged Packaging/Product</option>
+                                    <option>Manufacturer Recall</option>
+                                    <option>Contamination Suspected</option>
+                                    <option>Temperature Excursion (Cold Chain Break)</option>
+                                    <option>Physical Damage (Flood/Fire)</option>
+                                </select>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td colspan="2" bgcolor="#FFF0E0" align="center"><font size="2"><b> AUTHORIZATION & WITNESS</b></font></td>
+                         </tr>
+                         <tr>
+                            <td><b>Authorized By *</b></td>
+                            <td><input type="text" name="authorized_by" size="40" placeholder="Name of authorizing officer"></td>
+                         </tr>
+                         <tr>
+                            <td><b>Authorized Officer Title</b></td>
+                            <td>
+                                <select name="authority_title">
+                                    <option>Pharmacy Department Head</option>
+                                    <option>Medical Superintendent</option>
+                                    <option>Hospital Administrator</option>
+                                    <option>District Health Officer</option>
+                                    <option>NEMA Inspector</option>
+                                </select>
+                            </td>
+                         </tr>
+                         <tr>
+                            <td><b>Witness Name *</b></td>
+                            <td><input type="text" name="witness_name" size="40" placeholder="Name of witness staff member"></td>
+                         </tr>
+                         <tr>
+                            <td><b>Witness Title</b></td>
+                            <td><input type="text" name="witness_title" size="40" placeholder="e.g., Senior Pharmacist, Quality Officer"></td>
+                         </tr>
+                         <tr>
+                            <td><b>Disposal Cost (UGX)</b></td>
+                            <td><input type="text" name="disposal_cost" size="20" placeholder="Cost incurred for disposal"></td>
+                         </tr>
+                         <tr>
+                            <td><b>Additional Comments</b></td>
+                            <td><textarea name="comments" rows="3" cols="45" placeholder="Any observations or notes about the disposal process"></textarea></td>
+                         </tr>
+                         <tr bgcolor="#FFCC99">
+                            <td colspan="2" align="center">
+                                <input type="submit" value=" RECORD DISPOSAL">
+                                <input type="reset" value="CLEAR FORM">
+                            </td>
+                         </tr>
+                    </form>
+                </table>
+                
+                <!-- Disposal History -->
+                <br>
+                <table width="95%" align="center" border="1" cellpadding="6" cellspacing="0">
+                    <tr bgcolor="#003366">
+                        <th colspan="7"><font color="white"> RECENT DISPOSAL RECORDS</font></th>
+                    </tr>
+                    <tr bgcolor="#FFCC99">
+                        <th>Date</th>
+                        <th>Medicine</th>
+                        <th>Batch No</th>
+                        <th>Quantity</th>
+                        <th>Method</th>
+                        <th>Certificate No</th>
+                        <th>Authorized By</th>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td>2024-03-15</td>
+                        <td>Amoxicillin 250mg</td>
+                        <td>UMS-B2023-156</td>
+                        <td>200 units</td>
+                        <td>Incineration</td>
+                        <td>NEMA-INC-2024-045</td>
+                        <td>Dr. J. Okello</td>
+                    </tr>
+                    <tr>
+                        <td>2024-02-28</td>
+                        <td>Paracetamol 500mg</td>
+                        <td>UMS-B2023-189</td>
+                        <td>500 units</td>
+                        <td>Chemical Treatment</td>
+                        <td>NEMA-CHE-2024-032</td>
+                        <td>Mrs. A. Nambi</td>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td>2024-01-20</td>
+                        <td>ORS Sachets</td>
+                        <td>UMS-B2023-201</td>
+                        <td>2,000 units</td>
+                        <td>Return to Manufacturer</td>
+                        <td>RET-2024-008</td>
+                        <td>Mr. P. Musoke</td>
+                    </tr>
+                    <tr>
+                        <td>2023-12-10</td>
+                        <td>Cotrimoxazole</td>
+                        <td>UMS-B2023-145</td>
+                        <td>1,200 units</td>
+                        <td>Incineration</td>
+                        <td>NEMA-INC-2023-089</td>
+                        <td>Dr. S. Katende</td>
+                    </tr>
+                </table>
+                
+                <!-- NEMA Compliance Notice -->
+                <br>
+                <table width="95%" align="center" border="0" cellpadding="8" bgcolor="#E6F0FA">
+                    <tr>
+                        <td>
+                            <font size="2"><b> NATIONAL ENVIRONMENT MANAGEMENT AUTHORITY (NEMA) COMPLIANCE:</b></font><br>
+                            <font size="2">• All pharmaceutical waste must be disposed of according to NEMA guidelines (Statutory Instrument No. 12 of 2023)<br>
+                            • Incineration temperature must exceed 800°C for complete destruction<br>
+                            • Disposal certificates must be kept for minimum 5 years for audit purposes<br>
+                            • For controlled substances, additional DEA/NDA reporting required</font>
+                        </td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+        
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#003366" align="center" height="50">
+                <font size="2" color="white">Uganda Medical Stores - Safe Disposal, Environmental Protection, Regulatory Compliance</font>
+            </td>
+        </tr>
+        
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Uganda Medical Stores - Medicine Dispensing</title>
+</head>
+
+<body bgcolor="#E6F0FA" text="#003366">
+    
+    <table width="1000" align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0">
+        
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#006633" align="center" height="100">
+                <font size="5" face="Arial" color="white"><b>UGANDA MEDICAL STORES</b></font><br>
+                <font size="2" face="Arial" color="#FFCC99">Medicine Expiry Tracking System</font>
+            </td>
+        </tr>
+        
+        <!-- Navigation -->
+        <tr>
+            <td bgcolor="#FFCC99" align="center" height="40">
+                <a href="index.html">HOME</a> | <a href="hospitals.html">HOSPITALS</a> | <a href="medicines.html">MEDICINES</a> | 
+                <a href="batches.html">BATCHES</a> | <a href="dispense.html">DISPENSE</a> | <a href="transfer.html">TRANSFER</a> | 
+                <a href="alerts.html">ALERTS</a> | <a href="disposal.html">DISPOSAL</a> | <a href="reports.html">REPORTS</a>
+            </td>
+        </tr>
+        
+        <!-- Page Title -->
+        <tr>
+            <td bgcolor="#F0F7FF" align="center" height="60">
+                <font size="4" face="Arial"><b> MEDICINE DISPENSING</b></font><br>
+                <font size="2">Dispense medicines to patients - System checks expiry before dispensing</font>
+            </td>
+        </tr>
+        
+        <!-- Form Content -->
+        <tr>
+            <td bgcolor="white" valign="top" height="500">
+                
+                <!-- Scanner Simulation Notice -->
+                <table width="90%" align="center" border="0" cellpadding="8" bgcolor="#FFF0E0">
+                    <tr>
+                        <td align="center"><font size="2"><b> SCANNER READY:</b> Use barcode scanner or manually enter Batch ID below</font></td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <table width="80%" align="center" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFF8E7">
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#006633"><font color="white" size="4"><b>DISPENSE MEDICINE</b></font></td>
+                    </tr>
+                    <form action="#" method="POST">
+                        <tr>
+                            <td width="40%"><b>Scan Batch ID / Barcode *</b></td>
+                            <td><input type="text" name="batch_id" size="40" placeholder="Scan barcode or enter Batch ID (e.g., UMS-B2024-045)"></td>
+                        </tr>
+                        <tr bgcolor="#E6F0FA">
+                            <td colspan="2" align="center"><font size="2"><b>Batch Information (Auto-fills after scan)</b></font></td>
+                        </tr>
+                        <tr>
+                            <td><b>Medicine Name</b></td>
+                            <td><input type="text" name="medicine_name" size="50" value="Artemether/Lumefantrine 20/120mg" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><b>Batch Number</b></td>
+                            <td><input type="text" name="batch_number" size="40" value="UMS-B2024-045" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><b>Expiry Date</b></td>
+                            <td><input type="text" name="expiry_date" size="20" value="2024-04-15" readonly> <font color="#CC3300"><b> EXPIRES IN 18 DAYS</b></font></td>
+                        </tr>
+                        <tr>
+                            <td><b>Available Quantity</b></td>
+                            <td><input type="text" name="available_qty" size="20" value="5,000 units" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><b>Storage Location</b></td>
+                            <td><input type="text" name="location" size="40" value="Kampala Regional Store - Shelf A3" readonly></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><hr></td>
+                        </tr>
+                        <tr>
+                            <td><b>Patient Name *</b></td>
+                            <td><input type="text" name="patient_name" size="50" placeholder="Enter patient full name"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Patient ID / NIN *</b></td>
+                            <td><input type="text" name="patient_id" size="30" placeholder="National ID or Hospital Registration No."></td>
+                        </tr>
+                        <tr>
+                            <td><b>Quantity to Dispense *</b></td>
+                            <td><input type="text" name="quantity" size="20" placeholder="Number of tablets/capsules"> <font size="2">(Max: 5,000)</font></td>
+                        </tr>
+                        <tr>
+                            <td><b>Prescription Number *</b></td>
+                            <td><input type="text" name="prescription_no" size="30" placeholder="e.g., RX-2024-0456"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Prescribing Doctor</b></td>
+                            <td><input type="text" name="doctor" size="40" placeholder="Doctor's name"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Dispensed By *</b></td>
+                            <td><input type="text" name="dispensed_by" size="40" placeholder="Pharmacist/Nurse name"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Health Facility *</b></td>
+                            <td>
+                                <select name="facility">
+                                    <option>Mulago National Referral Hospital</option>
+                                    <option>Mbarara Regional Referral Hospital</option>
+                                    <option>Jinja Regional Referral Hospital</option>
+                                    <option>Gulu Regional Referral Hospital</option>
+                                    <option>Fort Portal Regional Referral Hospital</option>
+                                    <option>Moroto Regional Referral Hospital</option>
+                                    <option>Kampala District Health Center</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Ward/Department</b></td>
+                            <td>
+                                <select name="ward">
+                                    <option>Outpatient Pharmacy</option>
+                                    <option>Emergency Department</option>
+                                    <option>Inpatient Ward</option>
+                                    <option>Pediatric Ward</option>
+                                    <option>Maternity Ward</option>
+                                    <option>Malaria Clinic</option>
+                                    <option>ART Clinic</option>
+                                    <option>TB Clinic</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Dispensing Date</b></td>
+                            <td><input type="text" name="dispense_date" size="20" value="2024-03-28" readonly></td>
+                        </tr>
+                        <tr bgcolor="#FFCC99">
+                            <td colspan="2" align="center">
+                                <input type="submit" value=" CONFIRM DISPENSING">
+                                <input type="reset" value=" CLEAR FORM">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                
+                <!-- Today's Dispensing Summary -->
+                <br>
+                <table width="95%" align="center" border="1" cellpadding="6" cellspacing="0">
+                    <tr bgcolor="#006633">
+                        <th><font color="white">Time</font></th>
+                        <th><font color="white">Medicine</font></th>
+                        <th><font color="white">Patient</font></th>
+                        <th><font color="white">Quantity</font></th>
+                        <th><font color="white">Facility</font></th>
+                        <th><font color="white">Status</font></th>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td>09:30 AM</td>
+                        <td>Artemether/Lumefantrine</td>
+                        <td>Nakato Sarah</td>
+                        <td>24 tablets</td>
+                        <td>Mulago Hospital</td>
+                        <td bgcolor="#CCFFCC"> Dispensed</td>
+                    </tr>
+                    <tr>
+                        <td>10:15 AM</td>
+                        <td>Paracetamol 500mg</td>
+                        <td>Okello James</td>
+                        <td>10 tablets</td>
+                        <td>Mbarara Hospital</td>
+                        <td bgcolor="#CCFFCC"> Dispensed</td>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td>11:00 AM</td>
+                        <td>Amoxicillin 250mg</td>
+                        <td>Achieng Grace</td>
+                        <td>20 capsules</td>
+                        <td>Jinja Hospital</td>
+                        <td bgcolor="#CCFFCC">Dispensed</td>
+                    </tr>
+                </table>
+                
+                <!-- Expiry Warning Notice -->
+                <table width="95%" align="center" border="0" cellpadding="8" bgcolor="#FFE6E6">
+                    <tr>
+                        <td align="center"><font size="2" color="#CC3300"><b> IMPORTANT:</b> Always verify expiry date before dispensing. Never dispense expired medicine!</font></td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+        
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#003366" align="center" height="50">
+                <font size="2" color="white">Uganda Medical Stores - Safe Dispensing for Better Health Outcomes</font>
+            </td>
+        </tr>
+        
+    </table>
+    
+</body>
+</html>

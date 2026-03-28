@@ -1,0 +1,325 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Uganda Medical Stores - Scan Records</title>
+</head>
+
+<body bgcolor="#E6F0FA" text="#003366">
+    
+    <table width="1000" align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0">
+        
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#006633" align="center" height="100">
+                <font size="5" face="Arial" color="white"><b>UGANDA MEDICAL STORES</b></font><br>
+                <font size="2" face="Arial" color="#FFCC99">Medicine Expiry Tracking System</font>
+            </td>
+        </tr>
+        
+        <!-- Navigation -->
+        <tr>
+            <td bgcolor="#FFCC99" align="center" height="40">
+                <a href="index.html">HOME</a> | 
+                <a href="hospitals.html">HOSPITALS</a> | 
+                <a href="medicines.html">MEDICINES</a> | 
+                <a href="batches.html">BATCHES</a> | 
+                <a href="scan_records.html">SCAN RECORDS</a> | 
+                <a href="dispense.html">DISPENSE</a> | 
+                <a href="transfer.html">TRANSFER</a> | 
+                <a href="alerts.html">ALERTS</a> | 
+                <a href="disposal.html">DISPOSAL</a> | 
+                <a href="reports.html">REPORTS</a>
+            </td>
+        </tr>
+        
+        <!-- Page Title -->
+        <tr>
+            <td bgcolor="#F0F7FF" align="center" height="60">
+                <font size="4" face="Arial"><b> SCAN RECORDS & AUDIT TRAIL</b></font><br>
+                <font size="2">Track every scan event - Receive, Store, Dispense, Transfer, Check - Complete Batch History</font>
+            </td>
+        </tr>
+        
+        <!-- Form Content -->
+        <tr>
+            <td bgcolor="white" valign="top" height="500">
+                
+                <!-- Scanner Simulation Section -->
+                <table width="95%" align="center" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFF8E7">
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#006633"><font color="white" size="4"><b> SCANNER INTERFACE</b></font></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#FFF0E0">
+                            <font size="3"><b> BARCODE SCANNER READY</b></font><br>
+                            <font size="2">Position barcode in front of scanner or enter Batch ID manually</font>
+                        </td>
+                    </tr>
+                    <form action="#" method="POST">
+                        <tr>
+                            <td width="40%" align="right"><b>Scan/Enter Batch ID:</b></td>
+                            <td><input type="text" name="scan_batch" size="40" placeholder="Scan barcode or enter Batch ID (e.g., UMS-B2024-045)" style="font-size:18px; font-family:monospace;"> 
+                                <input type="submit" value=" SCAN"></td>
+                        </tr>
+                    </form>
+                    <tr bgcolor="#E6F0FA">
+                        <td colspan="2" align="center"><font size="2"><b> LAST SCAN RESULT:</b> Batch UMS-B2024-045 - Artemether/Lumefantrine - Expires in 18 days - <font color="#CC3300"><b>CRITICAL ALERT</b></font></font></td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <!-- Record New Scan Form -->
+                <table width="95%" align="center" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFF8E7">
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#006633"><font color="white" size="4"><b> RECORD NEW SCAN</b></font></td>
+                    </tr>
+                    <form action="#" method="POST">
+                        <tr>
+                            <td width="30%"><b>Batch ID *</b></td>
+                            <td><input type="text" name="batch_id" size="40" placeholder="Enter Batch ID to record scan"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Scan Type *</b></td>
+                            <td>
+                                <select name="scan_type">
+                                    <option>RECEIVE - Batch received at facility</option>
+                                    <option> STORE - Batch moved to storage location</option>
+                                    <option> DISPENSE - Medicine dispensed to patient</option>
+                                    <option>TRANSFER - Batch transferred to another facility</option>
+                                    <option>CHECK - Inventory check/audit</option>
+                                    <option> DISPOSAL - Batch sent for disposal</option>
+                                    <option>COLD CHAIN - Temperature check</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Scanned By *</b></td>
+                            <td><input type="text" name="scanned_by" size="40" placeholder="Name of staff member performing scan"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Scan Location</b></td>
+                            <td>
+                                <select name="scan_location">
+                                    <option>UMS Central Warehouse - Entebbe</option>
+                                    <option>Kampala Regional Store</option>
+                                    <option>Jinja Regional Store</option>
+                                    <option>Mbarara Regional Store</option>
+                                    <option>Gulu Regional Store</option>
+                                    <option>Mulago Hospital Pharmacy</option>
+                                    <option>Mbarara Hospital Pharmacy</option>
+                                    <option>Mobile Scanner Unit</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Device ID / Scanner ID</b></td>
+                            <td><input type="text" name="device_id" size="30" placeholder="e.g., SCAN-001, Mobile-APP"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Additional Notes</b></td>
+                            <td><textarea name="notes" rows="2" cols="45" placeholder="Any observations during scan"></textarea></td>
+                        </tr>
+                        <tr bgcolor="#FFCC99">
+                            <td colspan="2" align="center">
+                                <input type="submit" value=" RECORD SCAN">
+                                <input type="reset" value=" CLEAR">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                
+                <br>
+                
+                <!-- Scan History / Audit Trail -->
+                <table width="95%" align="center" border="1" cellpadding="8" cellspacing="0">
+                    <tr bgcolor="#006633">
+                        <th colspan="7"><font color="white"> COMPLETE SCAN HISTORY (AUDIT TRAIL)</font></th>
+                    </tr>
+                    <tr bgcolor="#FFCC99">
+                        <th>Date & Time</th>
+                        <th>Batch ID</th>
+                        <th>Medicine</th>
+                        <th>Scan Type</th>
+                        <th>Scanned By</th>
+                        <th>Location</th>
+                        <th>Device</th>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td>2024-03-28 09:30:15</td>
+                        <td>UMS-B2024-045</td>
+                        <td>Artemether/Lumefantrine</td>
+                        <td bgcolor="#FFE6E6">CHECK</td>
+                        <td>Dr. Okello</td>
+                        <td>Kampala Store</td>
+                        <td>SCAN-001</td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-27 14:20:30</td>
+                        <td>UMS-B2024-089</td>
+                        <td>Paracetamol 500mg</td>
+                        <td bgcolor="#E6F0FA"> DISPENSE</td>
+                        <td>Nurse Achieng</td>
+                        <td>Mulago Hospital</td>
+                        <td>SCAN-002</td>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td>2024-03-26 11:15:00</td>
+                        <td>UMS-B2024-112</td>
+                        <td>Amoxicillin 250mg</td>
+                        <td bgcolor="#FFF0E0"> TRANSFER</td>
+                        <td>Mr. Ssemwanga</td>
+                        <td>Mbarara Store</td>
+                        <td>SCAN-003</td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-25 16:45:22</td>
+                        <td>UMS-B2024-156</td>
+                        <td>ORS Sachets</td>
+                        <td bgcolor="#CCFFCC"> RECEIVE</td>
+                        <td>Mrs. Nakato</td>
+                        <td>Entebbe Warehouse</td>
+                        <td>SCAN-001</td>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td>2024-03-24 10:00:00</td>
+                        <td>UMS-B2024-045</td>
+                        <td>Artemether/Lumefantrine</td>
+                        <td bgcolor="#CCFFCC"> RECEIVE</td>
+                        <td>Mr. Mugisha</td>
+                        <td>Kampala Store</td>
+                        <td>SCAN-001</td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-23 09:15:45</td>
+                        <td>UMS-B2024-178</td>
+                        <td>Cotrimoxazole 480mg</td>
+                        <td bgcolor="#E6F0FA"> DISPENSE</td>
+                        <td>Nurse Kemigisha</td>
+                        <td>Mbarara Hospital</td>
+                        <td>SCAN-002</td>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td>2024-03-22 13:30:00</td>
+                        <td>UMS-B2024-201</td>
+                        <td>Quinine Injection</td>
+                        <td bgcolor="#FFF0E0"> STORE</td>
+                        <td>Pharmacist Byaruhanga</td>
+                        <td>Gulu Store</td>
+                        <td>SCAN-003</td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-21 11:20:10</td>
+                        <td>UMS-B2024-089</td>
+                        <td>Paracetamol 500mg</td>
+                        <td bgcolor="#CCFFCC"> RECEIVE</td>
+                        <td>Mr. Kato</td>
+                        <td>Jinja Store</td>
+                        <td>SCAN-001</td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <!-- Filter & Search -->
+                <table width="95%" align="center" border="0" cellpadding="8" bgcolor="#FFF8E7">
+                    <tr>
+                        <td colspan="3" align="center" bgcolor="#006633"><font color="white" size="3"><b> FILTER SCAN HISTORY</b></font></td>
+                    </tr>
+                    <form action="#" method="GET">
+                        <tr align="center">
+                            <td width="33%">
+                                <b>By Batch ID:</b><br>
+                                <input type="text" size="25" placeholder="Enter Batch ID">
+                            </td>
+                            <td width="33%">
+                                <b>By Scan Type:</b><br>
+                                <select>
+                                    <option>All Scans</option>
+                                    <option>Receive</option>
+                                    <option>Store</option>
+                                    <option>Dispense</option>
+                                    <option>Transfer</option>
+                                    <option>Check</option>
+                                </select>
+                            </td>
+                            <td width="33%">
+                                <b>By Date Range:</b><br>
+                                From: <input type="text" size="10" placeholder="YYYY-MM-DD">
+                                To: <input type="text" size="10" placeholder="YYYY-MM-DD">
+                            </td>
+                        </tr>
+                        <tr align="center">
+                            <td colspan="3">
+                                <input type="submit" value=" SEARCH SCANS">
+                                <input type="reset" value=" CLEAR FILTERS">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                
+                <br>
+                
+                <!-- Scan Statistics -->
+                <table width="95%" align="center" border="0" cellpadding="8" bgcolor="#E6F0FA">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#006633"><font color="white" size="3"><b> SCAN STATISTICS (Last 30 Days)</b></font></td>
+                    </tr>
+                    <tr align="center" bgcolor="#F0F7FF">
+                        <td width="25%"><font size="4"><b>1,245</b></font><br><font size="2">Total Scans</font></td>
+                        <td width="25%"><font size="4"><b>342</b></font><br><font size="2">Receive Scans</font></td>
+                        <td width="25%"><font size="4"><b>567</b></font><br><font size="2">Dispense Scans</font></td>
+                        <td width="25%"><font size="4"><b>89</b></font><br><font size="2">Transfer Scans</font></td>
+                    </tr>
+                    <tr align="center" bgcolor="#F0F7FF">
+                        <td><font size="4"><b>156</b></font><br><font size="2">Store Scans</font></td>
+                        <td><font size="4"><b>91</b></font><br><font size="2">Check Scans</font></td>
+                        <td><font size="4"><b>12</b></font><br><font size="2">Disposal Scans</font></td>
+                        <td><font size="4"><b>8</b></font><br><font size="2">Cold Chain Scans</font></td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <!-- Scan Guidelines -->
+                <table width="95%" align="center" border="0" cellpadding="8" bgcolor="#FFF0E0">
+                    <tr>
+                        <td>
+                            <font size="2"><b>📌 SCAN RECORD GUIDELINES:</b></font><br>
+                            <font size="2">• <b>Every batch movement MUST be scanned</b> - Receiving, storing, dispensing, transferring<br>
+                            • <b>Scanner automatically checks expiry</b> - Blocks dispensing of expired medicine<br>
+                            • <b>Complete audit trail</b> - Every scan is recorded for regulatory compliance<br>
+                            • <b>Cold chain monitoring</b> - Temperature logs recorded for refrigerated medicines<br>
+                            • <b>Barcode format:</b> Standard GS1-128 barcodes with batch and expiry information</font>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <!-- Barcode Sample -->
+                <table width="95%" align="center" border="0" cellpadding="5" bgcolor="#CCCCCC">
+                    <tr>
+                        <td align="center">
+                            <font size="1" face="monospace"><b> BARCODE SAMPLE:</b></font><br>
+                            <font size="4" face="monospace">*UMS-B2024-045*2024-04-15*ARTEMETHER*5000*</font>
+                        </td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+        
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#003366" align="center" height="50">
+                <font size="2" color="white">Uganda Medical Stores - Every Scan Counts, Complete Batch Traceability</font>
+            </td>
+        </tr>
+        
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Uganda Medical Stores - Medicine Catalog</title>
+</head>
+
+<body bgcolor="#E6F0FA" text="#003366">
+    
+    <table width="1000" align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0">
+        
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#006633" align="center" height="100">
+                <font size="5" face="Arial" color="white"><b>UGANDA MEDICAL STORES</b></font><br>
+                <font size="2" face="Arial" color="#FFCC99">Medicine Expiry Tracking System</font>
+            </td>
+        </tr>
+        
+        <!-- Navigation -->
+        <tr>
+            <td bgcolor="#FFCC99" align="center" height="40">
+                <a href="index.html">HOME</a> | <a href="hospitals.html">HOSPITALS</a> | <a href="medicines.html">MEDICINES</a> | 
+                <a href="batches.html">BATCHES</a> | <a href="dispense.html">DISPENSE</a> | <a href="transfer.html">TRANSFER</a> | 
+                <a href="alerts.html">ALERTS</a> | <a href="disposal.html">DISPOSAL</a> | <a href="reports.html">REPORTS</a>
+            </td>
+        </tr>
+        
+        <!-- Page Title -->
+        <tr>
+            <td bgcolor="#F0F7FF" align="center" height="60">
+                <font size="4" face="Arial"><b> MEDICINE CATALOG</b></font><br>
+                <font size="2">Uganda Essential Medicines List (EML) - Ministry of Health Approved</font>
+            </td>
+        </tr>
+        
+        <!-- Form Content -->
+        <tr>
+            <td bgcolor="white" valign="top" height="500">
+                
+                <table width="80%" align="center" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFF8E7">
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#006633"><font color="white" size="4"><b>REGISTER NEW MEDICINE</b></font></td>
+                    </tr>
+                    <form action="#" method="POST">
+                        <tr>
+                            <td width="40%"><b>Medicine ID *</b></td>
+                            <td><input type="text" name="medicine_id" size="30" placeholder="e.g., UMS-M001"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Generic Name *</b></td>
+                            <td><input type="text" name="generic_name" size="50" placeholder="e.g., Artemether/Lumefantrine"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Brand Name</b></td>
+                            <td><input type="text" name="brand_name" size="40" placeholder="e.g., Coartem"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Medicine Category</b></td>
+                            <td>
+                                <select name="category">
+                                    <option>Antimalarial</option>
+                                    <option>Antibiotic</option>
+                                    <option>Antiretroviral (ARV)</option>
+                                    <option>Analgesic (Pain Relief)</option>
+                                    <option>Antidiabetic</option>
+                                    <option>Antihypertensive</option>
+                                    <option>Vaccines</option>
+                                    <option>Maternal Health</option>
+                                    <option>Nutritional Supplements</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Dosage Form</b></td>
+                            <td>
+                                <select name="dosage">
+                                    <option>Tablet</option>
+                                    <option>Capsule</option>
+                                    <option>Syrup</option>
+                                    <option>Injection</option>
+                                    <option>Inhaler</option>
+                                    <option>Cream/Ointment</option>
+                                    <option>Sachet</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Strength</b></td>
+                            <td><input type="text" name="strength" size="30" placeholder="e.g., 20mg/120mg, 500mg"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Storage Requirements</b></td>
+                            <td>
+                                <select name="storage">
+                                    <option>Room Temperature (15-25°C)</option>
+                                    <option>Refrigerated (2-8°C)</option>
+                                    <option>Cool Place (below 30°C)</option>
+                                    <option>Cold Chain Required</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>WHO Essential Medicine</b></td>
+                            <td><input type="checkbox" name="who_essential"> Yes - Listed on WHO Essential Medicines List</td>
+                        </tr>
+                        <tr>
+                            <td><b>Uganda EML Status</b></td>
+                            <td><input type="checkbox" name="uganda_eml"> Yes - Uganda Essential Medicines List</td>
+                        </tr>
+                        <tr bgcolor="#FFCC99">
+                            <td colspan="2" align="center">
+                                <input type="submit" value=" REGISTER MEDICINE">
+                                <input type="reset" value=" CLEAR FORM">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                
+                <!-- Uganda Essential Medicines List -->
+                <br>
+                <table width="95%" align="center" border="1" cellpadding="6" cellspacing="0">
+                    <tr bgcolor="#006633">
+                        <th><font color="white">Medicine</font></th>
+                        <th><font color="white">Category</font></th>
+                        <th><font color="white">Dosage Form</font></th>
+                        <th><font color="white">Storage</font></th>
+                        <th><font color="white">Status</font></th>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td>Artemether/Lumefantrine</td>
+                        <td>Antimalarial</td>
+                        <td>Tablet</td>
+                        <td>Room Temp</td>
+                        <td> In Stock</td>
+                    </tr>
+                    <tr>
+                        <td>Paracetamol 500mg</td>
+                        <td>Analgesic</td>
+                        <td>Tablet</td>
+                        <td>Room Temp</td>
+                        <td> In Stock</td>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td>Amoxicillin 250mg</td>
+                        <td>Antibiotic</td>
+                        <td>Capsule</td>
+                        <td>Room Temp</td>
+                        <td> In Stock</td>
+                    </tr>
+                    <tr>
+                        <td>ORS Sachets</td>
+                        <td>Nutritional</td>
+                        <td>Sachet</td>
+                        <td>Room Temp</td>
+                        <td> In Stock</td>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td>Cotrimoxazole 480mg</td>
+                        <td>Antibiotic</td>
+                        <td>Tablet</td>
+                        <td>Room Temp</td>
+                        <td> In Stock</td>
+                    </tr>
+                    <tr>
+                        <td>Magnesium Sulphate</td>
+                        <td>Maternal Health</td>
+                        <td>Injection</td>
+                        <td>Room Temp</td>
+                        <td> In Stock</td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+        
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#003366" align="center" height="50">
+                <font size="2" color="white">Uganda Medical Stores - Quality Medicines for Better Health</font>
+            </td>
+        </tr>
+        
+    </table>
+    
+</body>
+</html>

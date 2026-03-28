@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Uganda Medical Stores - Reports Dashboard</title>
+</head>
+
+<body bgcolor="#E6F0FA" text="#003366">
+    
+    <table width="1000" align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0">
+        
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#006633" align="center" height="100">
+                <font size="5" face="Arial" color="white"><b>UGANDA MEDICAL STORES</b></font><br>
+                <font size="2" face="Arial" color="#FFCC99">Medicine Expiry Tracking System</font>
+            </td>
+        </tr>
+        
+        <!-- Navigation -->
+        <tr>
+            <td bgcolor="#FFCC99" align="center" height="40">
+                <a href="index.html">HOME</a> | <a href="hospitals.html">HOSPITALS</a> | <a href="medicines.html">MEDICINES</a> | 
+                <a href="batches.html">BATCHES</a> | <a href="dispense.html">DISPENSE</a> | <a href="transfer.html">TRANSFER</a> | 
+                <a href="alerts.html">ALERTS</a> | <a href="disposal.html">DISPOSAL</a> | <a href="reports.html">REPORTS</a>
+            </td>
+        </tr>
+        
+        <!-- Page Title -->
+        <tr>
+            <td bgcolor="#F0F7FF" align="center" height="60">
+                <font size="4" face="Arial"><b> REPORTS & ANALYTICS DASHBOARD</b></font><br>
+                <font size="2">Ministry of Health Reports | Inventory Analysis | Waste Management Metrics</font>
+            </td>
+        </tr>
+        
+        <!-- Form Content -->
+        <tr>
+            <td bgcolor="white" valign="top" height="500">
+                
+                <!-- Report Generation Form -->
+                <table width="90%" align="center" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFF8E7">
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#006633"><font color="white" size="4"><b>GENERATE REPORT</b></font></td>
+                    </tr>
+                    <form action="#" method="POST">
+                        <tr>
+                            <td width="30%"><b>Report Type *</b></td>
+                            <td>
+                                <select name="report_type">
+                                    <option>Expiry Report (All Batches)</option>
+                                    <option>Critical Expiry Report (≤30 days)</option>
+                                    <option>Waste Analysis Report</option>
+                                    <option>Inventory Status Report</option>
+                                    <option>Transfer History Report</option>
+                                    <option>Disposal Summary Report</option>
+                                    <option>Regional Stock Summary</option>
+                                    <option>Medicine Usage Trends</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Region / Facility</b></td>
+                            <td>
+                                <select name="region">
+                                    <option>All Uganda</option>
+                                    <option>Central Region</option>
+                                    <option>Eastern Region</option>
+                                    <option>Western Region</option>
+                                    <option>Northern Region</option>
+                                    <option>Karamoja Region</option>
+                                    <option>Mulago National Referral Hospital</option>
+                                    <option>Mbarara Regional Referral Hospital</option>
+                                    <option>Jinja Regional Referral Hospital</option>
+                                    <option>Gulu Regional Referral Hospital</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Start Date</b></td>
+                            <td><input type="text" name="start_date" size="20" placeholder="YYYY-MM-DD" value="2024-01-01"></td>
+                        </tr>
+                        <tr>
+                            <td><b>End Date</b></td>
+                            <td><input type="text" name="end_date" size="20" placeholder="YYYY-MM-DD" value="2024-03-28"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Medicine Category</b></td>
+                            <td>
+                                <select name="category">
+                                    <option>All Categories</option>
+                                    <option>Antimalarial</option>
+                                    <option>Antibiotic</option>
+                                    <option>Antiretroviral (ARV)</option>
+                                    <option>Analgesic</option>
+                                    <option>Maternal Health</option>
+                                    <option>Vaccines</option>
+                                    <option>Nutritional Supplements</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Output Format</b></td>
+                            <td>
+                                <select name="format">
+                                    <option>HTML - View Online</option>
+                                    <option>PDF - Download Report</option>
+                                    <option>Excel - Spreadsheet Export</option>
+                                    <option>CSV - Data Export</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr bgcolor="#FFCC99">
+                            <td colspan="2" align="center">
+                                <input type="submit" value="GENERATE REPORT">
+                                <input type="reset" value=" RESET">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                
+                <br>
+                
+                <!-- Summary Statistics -->
+                <table width="95%" align="center" border="0" cellpadding="10" cellspacing="5">
+                    <tr>
+                        <td colspan="4" align="center" bgcolor="#006633"><font color="white" size="3"><b> KEY PERFORMANCE INDICATORS (KPI)</b></font></td>
+                    </tr>
+                    <tr align="center" bgcolor="#F0F7FF">
+                        <td width="25%"><font size="4"><b>UGX 156M</b></font><br><font size="2">Waste Prevented (YTD)</font></td>
+                        <td width="25%"><font size="4"><b>98.5%</b></font><br><font size="2">Medicines Used Before Expiry</font></td>
+                        <td width="25%"><font size="4"><b>23</b></font><br><font size="2">Critical Alerts Active</font></td>
+                        <td width="25%"><font size="4"><b>45</b></font><br><font size="2">Facilities Connected</font></td>
+                    </tr>
+                    <tr align="center" bgcolor="#FFF8E7">
+                        <td><font size="4"><b>UGX 12.5M</b></font><br><font size="2">Disposal Cost Saved</font></td>
+                        <td><font size="4"><b>2,340</b></font><br><font size="2">Active Batches</font></td>
+                        <td><font size="4"><b>156</b></font><br><font size="2">Medicine Types</font></td>
+                        <td><font size="4"><b>89%</b></font><br><font size="2">Alert Resolution Rate</font></td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <!-- Regional Summary -->
+                <table width="95%" align="center" border="1" cellpadding="8" cellspacing="0">
+                    <tr bgcolor="#006633">
+                        <th colspan="5"><font color="white"> REGIONAL STOCK SUMMARY (As of March 2024)</font></th>
+                    </tr>
+                    <tr bgcolor="#FFCC99">
+                        <th>Region</th>
+                        <th>Active Batches</th>
+                        <th>Near Expiry (≤60 days)</th>
+                        <th>Critical (≤30 days)</th>
+                        <th>Value (UGX)</th>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td><b>Central</b> (Kampala)</td>
+                        <td>890</td>
+                        <td>45</td>
+                        <td>8</td>
+                        <td>UGX 245M</td>
+                    </tr>
+                    <tr>
+                        <td><b>Eastern</b> (Jinja)</td>
+                        <td>520</td>
+                        <td>32</td>
+                        <td>5</td>
+                        <td>UGX 128M</td>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td><b>Western</b> (Mbarara)</td>
+                        <td>480</td>
+                        <td>28</td>
+                        <td>4</td>
+                        <td>UGX 112M</td>
+                    </tr>
+                    <tr>
+                        <td><b>Northern</b> (Gulu)</td>
+                        <td>320</td>
+                        <td>22</td>
+                        <td>4</td>
+                        <td>UGX 78M</td>
+                    </tr>
+                    <tr bgcolor="#F0F7FF">
+                        <td><b>Karamoja</b> (Moroto)</td>
+                        <td>130</td>
+                        <td>15</td>
+                        <td>2</td>
+                        <td>UGX 32M</td>
+                    </tr>
+                    <tr bgcolor="#FFF0E0">
+                        <td><b>TOTAL UGANDA</b></td>
+                        <td><b>2,340</b></td>
+                        <td><b>142</b></td>
+                        <td><b>23</b></td>
+                        <td><b>UGX 595M</b></td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <!-- Top Expiring Medicines -->
+                <table width="95%" align="center" border="1" cellpadding="8" cellspacing="0">
+                    <tr bgcolor="#CC6600">
+                        <th colspan="5"><font color="white"> TOP 5 MEDICINES AT RISK (Expiring within 60 days)</font></th>
+                    </tr>
+                    <tr bgcolor="#FFCC99">
+                        <th>Medicine</th>
+                        <th>Region</th>
+                        <th>Quantity</th>
+                        <th>Expiry Date</th>
+                        <th>Days Left</th>
+                        <th>Value (UGX)</th>
+                    </tr>
+                    <tr bgcolor="#FFE6E6">
+                        <td>Artemether/Lumefantrine</td>
+                        <td>Central</td>
+                        <td>5,000</td>
+                        <td>2024-04-15</td>
+                        <td><b>18 days</b></td>
+                        <td>UGX 35M</td>
+                    </tr>
+                    <tr bgcolor="#FFE6E6">
+                        <td>ORS Sachets</td>
+                        <td>Northern</td>
+                        <td>8,000</td>
+                        <td>2024-04-22</td>
+                        <td><b>25 days</b></td>
+                        <td>UGX 8M</td>
+                    </tr>
+                    <tr bgcolor="#FFF0E0">
+                        <td>Amoxicillin 250mg</td>
+                        <td>Western</td>
+                        <td>8,500</td>
+                        <td>2024-06-20</td>
+                        <td>84 days</td>
+                        <td>UGX 17M</td>
+                    </tr>
+                    <tr bgcolor="#FFF0E0">
+                        <td>Paracetamol 500mg</td>
+                        <td>Eastern</td>
+                        <td>6,000</td>
+                        <td>2024-06-15</td>
+                        <td>79 days</td>
+                        <td>UGX 6M</td>
+                    </tr>
+                    <tr bgcolor="#FFF0E0">
+                        <td>Cotrimoxazole 480mg</td>
+                        <td>Central</td>
+                        <td>12,000</td>
+                        <td>2024-07-10</td>
+                        <td>104 days</td>
+                        <td>UGX 18M</td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <!-- Monthly Trends -->
+                <table width="95%" align="center" border="0" cellpadding="8" bgcolor="#E6F0FA">
+                    <tr>
+                        <td>
+                            <font size="2"><b> TREND ANALYSIS (Last 6 Months):</b></font><br>
+                            <font size="2">• <b>Expiry Waste Reduced:</b> 42% decrease compared to previous period<br>
+                            • <b>Transfer Efficiency:</b> 78% of near-expiry medicines successfully redistributed<br>
+                            • <b>Top Performing Region:</b> Central Region - 96% usage rate before expiry<br>
+                            • <b>Area for Improvement:</b> Karamoja Region - Cold chain storage upgrades needed<br>
+                            • <b>Ministry of Health Target:</b> Achieve 95% medicine usage before expiry by Q4 2024</font>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <!-- Export Options -->
+                <table width="95%" align="center" border="0" cellpadding="8" bgcolor="#FFF8E7">
+                    <tr>
+                        <td align="center">
+                            <font size="2"><b> QUICK EXPORT OPTIONS:</b></font><br>
+                            <a href="#"> Export Full Inventory Report (PDF)</a> | 
+                            <a href="#"> Export Expiry Data (Excel)</a> | 
+                            <a href="#"> Export Alert Summary (CSV)</a> | 
+                            <a href="#"> Ministry of Health Format</a>
+                        </td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+        
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#003366" align="center" height="50">
+                <font size="2" color="white">Uganda Medical Stores - Data-Driven Decisions for Better Healthcare Outcomes</font>
+            </td>
+        </tr>
+        
+    </table>
+    
+</body>
+</html>

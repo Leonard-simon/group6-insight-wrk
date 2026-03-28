@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Uganda Medical Stores - Batch Management</title>
+</head>
+
+<body bgcolor="#E6F0FA" text="#003366">
+    
+    <table width="1000" align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0">
+        
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#006633" align="center" height="100">
+                <font size="5" face="Arial" color="white"><b>UGANDA MEDICAL STORES</b></font><br>
+                <font size="2" face="Arial" color="#FFCC99">Medicine Expiry Tracking System</font>
+            </td>
+        </tr>
+        
+        <!-- Navigation -->
+        <tr>
+            <td bgcolor="#FFCC99" align="center" height="40">
+                <a href="index.html">HOME</a> | <a href="hospitals.html">HOSPITALS</a> | <a href="medicines.html">MEDICINES</a> | 
+                <a href="batches.html">BATCHES</a> | <a href="dispense.html">DISPENSE</a> | <a href="transfer.html">TRANSFER</a> | 
+                <a href="alerts.html">ALERTS</a> | <a href="disposal.html">DISPOSAL</a> | <a href="reports.html">REPORTS</a>
+            </td>
+        </tr>
+        
+        <!-- Page Title -->
+        <tr>
+            <td bgcolor="#F0F7FF" align="center" height="60">
+                <font size="4" face="Arial"><b> BATCH MANAGEMENT</b></font><br>
+                <font size="2">Receive, track, and monitor medicine batches across Uganda</font>
+            </td>
+        </tr>
+        
+        <!-- Form Content -->
+        <tr>
+            <td bgcolor="white" valign="top" height="500">
+                
+                <table width="80%" align="center" border="0" cellpadding="10" cellspacing="0" bgcolor="#FFF8E7">
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#006633"><font color="white" size="4"><b>RECEIVE NEW BATCH</b></font></td>
+                    </tr>
+                    <form action="#" method="POST">
+                        <tr>
+                            <td width="40%"><b>Batch ID *</b></td>
+                            <td><input type="text" name="batch_id" size="30" placeholder="e.g., UMS-B2024-001"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Select Medicine *</b></td>
+                            <td>
+                                <select name="medicine_id">
+                                    <option>Artemether/Lumefantrine (Coartem)</option>
+                                    <option>Paracetamol 500mg</option>
+                                    <option>Amoxicillin 250mg</option>
+                                    <option>ORS Sachets</option>
+                                    <option>Cotrimoxazole 480mg</option>
+                                    <option>Magnesium Sulphate Injection</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Receiving Facility *</b></td>
+                            <td>
+                                <select name="facility">
+                                    <option>UMS Central Warehouse - Entebbe</option>
+                                    <option>Kampala Regional Store</option>
+                                    <option>Jinja Regional Store</option>
+                                    <option>Mbarara Regional Store</option>
+                                    <option>Gulu Regional Store</option>
+                                    <option>Mulago National Referral Hospital</option>
+                                    <option>Mbarara Regional Referral Hospital</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Manufacturer Batch No</b></td>
+                            <td><input type="text" name="batch_number" size="40" placeholder="Manufacturer's batch number"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Manufacturing Date</b></td>
+                            <td><input type="text" name="mfg_date" size="20" placeholder="YYYY-MM-DD"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Expiry Date *</b></td>
+                            <td><input type="text" name="expiry_date" size="20" placeholder="YYYY-MM-DD"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Quantity Received</b></td>
+                            <td><input type="text" name="quantity" size="20" placeholder="Number of units"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Unit Price (UGX)</b></td>
+                            <td><input type="text" name="unit_price" size="20" placeholder="Uganda Shillings"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Supplier/Distributor</b></td>
+                            <td>
+                                <select name="supplier">
+                                    <option>National Medical Stores (NMS)</option>
+                                    <option>Joint Medical Stores (JMS)</option>
+                                    <option>WHO/UNICEF Supply Division</option>
+                                    <option>Global Fund</option>
+                                    <option>Private Supplier</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Storage Location</b></td>
+                            <td><input type="text" name="location" size="40" placeholder="e.g., Warehouse A - Shelf 3, Cold Room 2"></td>
+                        </tr>
+                        <tr bgcolor="#FFCC99">
+                            <td colspan="2" align="center">
+                                <input type="submit" value=" RECEIVE BATCH">
+                                <input type="reset" value=" CLEAR FORM">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                
+                <!-- Recent Batches Received -->
+                <br>
+                <table width="95%" align="center" border="1" cellpadding="6" cellspacing="0">
+                    <tr bgcolor="#006633">
+                        <th><font color="white">Batch ID</font></th>
+                        <th><font color="white">Medicine</font></th>
+                        <th><font color="white">Expiry Date</font></th>
+                        <th><font color="white">Qty</font></th>
+                        <th><font color="white">Location</font></th>
+                        <th><font color="white">Status</font></th>
+                    </tr>
+                    <tr bgcolor="#FFE6E6">
+                        <td>UMS-B2024-045</td>
+                        <td>Artemether/Lumefantrine</td>
+                        <td>2024-04-15</td>
+                        <td>5,000</td>
+                        <td>Kampala Store</td>
+                        <td bgcolor="#FFCC99"> CRITICAL</td>
+                    </tr>
+                    <tr>
+                        <td>UMS-B2024-089</td>
+                        <td>Paracetamol 500mg</td>
+                        <td>2024-09-30</td>
+                        <td>10,000</td>
+                        <td>Entebbe Warehouse</td>
+                        <td bgcolor="#CCFFCC"> ACTIVE</td>
+                    </tr>
+                    <tr bgcolor="#FFF0E0">
+                        <td>UMS-B2024-112</td>
+                        <td>Amoxicillin 250mg</td>
+                        <td>2024-06-20</td>
+                        <td>8,500</td>
+                        <td>Mbarara Store</td>
+                        <td bgcolor="#FFFFCC"> WARNING</td>
+                    </tr>
+                    <tr>
+                        <td>UMS-B2024-156</td>
+                        <td>ORS Sachets</td>
+                        <td>2024-12-10</td>
+                        <td>25,000</td>
+                        <td>Gulu Store</td>
+                        <td bgcolor="#CCFFCC"> ACTIVE</td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+        
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#003366" align="center" height="50">
+                <font size="2" color="white">Uganda Medical Stores - Tracking Every Batch, Ensuring Patient Safety</font>
+            </td>
+        </tr>
+        
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Uganda Medical Stores - Expiry Alerts</title>
+</head>
+
+<body bgcolor="#E6F0FA" text="#003366">
+    
+    <table width="1000" align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0">
+        
+        <!-- Header -->
+        <tr>
+            <td bgcolor="#006633" align="center" height="100">
+                <font size="5" face="Arial" color="white"><b>UGANDA MEDICAL STORES</b></font><br>
+                <font size="2" face="Arial" color="#FFCC99">Medicine Expiry Tracking System</font>
+            </td>
+        </tr>
+        
+        <!-- Navigation -->
+        <tr>
+            <td bgcolor="#FFCC99" align="center" height="40">
+                <a href="index.html">HOME</a> | <a href="hospitals.html">HOSPITALS</a> | <a href="medicines.html">MEDICINES</a> | 
+                <a href="batches.html">BATCHES</a> | <a href="dispense.html">DISPENSE</a> | <a href="transfer.html">TRANSFER</a> | 
+                <a href="alerts.html">ALERTS</a> | <a href="disposal.html">DISPOSAL</a> | <a href="reports.html">REPORTS</a>
+            </td>
+        </tr>
+        
+        <!-- Page Title -->
+        <tr>
+            <td bgcolor="#F0F7FF" align="center" height="60">
+                <font size="4" face="Arial"><b> EXPIRY ALERT DASHBOARD</b></font><br>
+                <font size="2">Real-time alerts for medicines approaching expiry - Take action immediately</font>
+            </td>
+        </tr>
+        
+        <!-- Form Content -->
+        <tr>
+            <td bgcolor="white" valign="top" height="500">
+                
+                <!-- Alert Statistics -->
+                <table width="95%" align="center" border="0" cellpadding="10" cellspacing="5">
+                    <tr align="center">
+                        <td width="25%" bgcolor="#FFE6E6"><font size="4"><b>12</b></font><br><font size="2">CRITICAL ALERTS<br>(≤30 days)</font></td>
+                        <td width="25%" bgcolor="#FFF0E0"><font size="4"><b>18</b></font><br><font size="2">WARNING ALERTS<br>(31-60 days)</font></td>
+                        <td width="25%" bgcolor="#E6F0FA"><font size="4"><b>8</b></font><br><font size="2">INFO ALERTS<br>(61-90 days)</font></td>
+                        <td width="25%" bgcolor="#CCFFCC"><font size="4"><b>UGX 156M</b></font><br><font size="2">WASTE PREVENTED</font></td>
+                    </tr>
+                </table>
+                
+                <!-- Filter Options -->
+                <table width="95%" align="center" border="0" cellpadding="8" bgcolor="#FFF8E7">
+                    <tr>
+                        <td align="center">
+                            <font size="2"><b>FILTER BY:</b></font>
+                            <select>
+                                <option>All Alerts</option>
+                                <option>Critical (≤30 days)</option>
+                                <option>Warning (31-60 days)</option>
+                                <option>Acknowledged</option>
+                                <option>Pending Action</option>
+                            </select>
+                            <select>
+                                <option>All Regions</option>
+                                <option>Central Region</option>
+                                <option>Eastern Region</option>
+                                <option>Western Region</option>
+                                <option>Northern Region</option>
+                            </select>
+                            <input type="text" size="20" placeholder="Search batch/medicine...">
+                            <input type="submit" value="Apply">
+                        </td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <!-- Critical Alerts Table -->
+                <table width="95%" align="center" border="1" cellpadding="8" cellspacing="0">
+                    <tr bgcolor="#CC3300">
+                        <th colspan="6"><font color="white" size="3"> CRITICAL ALERTS (Expiring within 30 days)</font></th>
+                    </tr>
+                    <tr bgcolor="#FFCC99">
+                        <th>Medicine</th>
+                        <th>Batch Number</th>
+                        <th>Location/Facility</th>
+                        <th>Expiry Date</th>
+                        <th>Days Left</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr bgcolor="#FFE6E6">
+                        <td>Artemether/Lumefantrine</td>
+                        <td>UMS-B2024-045</td>
+                        <td>Kampala Regional Store</td>
+                        <td>2024-04-15</td>
+                        <td><b>18 days</b></td>
+                        <td>5,000</td>
+                        <td><a href="transfer.html"> Transfer Now</a></td>
+                    </tr>
+                    <tr bgcolor="#FFE6E6">
+                        <td>ORS Sachets</td>
+                        <td>UMS-B2024-078</td>
+                        <td>Gulu Regional Store</td>
+                        <td>2024-04-22</td>
+                        <td><b>25 days</b></td>
+                        <td>8,000</td>
+                        <td><a href="transfer.html"> Transfer Now</a></td>
+                    </tr>
+                    <tr bgcolor="#FFE6E6">
+                        <td>Magnesium Sulphate</td>
+                        <td>UMS-B2024-092</td>
+                        <td>Mbarara Hospital</td>
+                        <td>2024-04-28</td>
+                        <td><b>31 days</b></td>
+                        <td>500 vials</td>
+                        <td><a href="dispense.html"> Dispense Priority</a></td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <!-- Warning Alerts Table -->
+                <table width="95%" align="center" border="1" cellpadding="8" cellspacing="0">
+                    <tr bgcolor="#CC6600">
+                        <th colspan="6"><font color="white" size="3"> WARNING ALERTS (Expiring 31-60 days)</font></th>
+                    </tr>
+                    <tr bgcolor="#FFCC99">
+                        <th>Medicine</th>
+                        <th>Batch Number</th>
+                        <th>Location/Facility</th>
+                        <th>Expiry Date</th>
+                        <th>Days Left</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr bgcolor="#FFF0E0">
+                        <td>Amoxicillin 250mg</td>
+                        <td>UMS-B2024-112</td>
+                        <td>Mbarara Regional Store</td>
+                        <td>2024-06-20</td>
+                        <td>84 days</td>
+                        <td>8,500</td>
+                        <td><a href="transfer.html"> Plan Transfer</a></td>
+                    </tr>
+                    <tr bgcolor="#FFF0E0">
+                        <td>Paracetamol 500mg</td>
+                        <td>UMS-B2024-103</td>
+                        <td>Jinja Hospital</td>
+                        <td>2024-06-15</td>
+                        <td>79 days</td>
+                        <td>6,000</td>
+                        <td><a href="dispense.html"> Monitor Usage</a></td>
+                    </tr>
+                    <tr bgcolor="#FFF0E0">
+                        <td>Cotrimoxazole 480mg</td>
+                        <td>UMS-B2024-121</td>
+                        <td>Entebbe Warehouse</td>
+                        <td>2024-07-10</td>
+                        <td>104 days</td>
+                        <td>12,000</td>
+                        <td><a href="#"> Acknowledge</a></td>
+                    </tr>
+                </table>
+                
+                <br>
+                
+                <!-- Acknowledgment Form -->
+                <table width="95%" align="center" border="0" cellpadding="10" bgcolor="#FFF8E7">
+                    <tr>
+                        <td colspan="2" align="center" bgcolor="#006633"><font color="white"><b>ACKNOWLEDGE ALERT</b></font></td>
+                    </tr>
+                    <form action="#" method="POST">
+                        <tr>
+                            <td width="30%"><b>Alert ID / Batch ID</b></td>
+                            <td><input type="text" size="30" placeholder="Enter Batch ID"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Action Taken</b></td>
+                            <td>
+                                <select>
+                                    <option>Transfer Initiated</option>
+                                    <option>Priority Dispensing Planned</option>
+                                    <option>Notified Facility</option>
+                                    <option>Under Review</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Acknowledged By</b></td>
+                            <td><input type="text" size="40" placeholder="Name of responsible officer"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <input type="submit" value="✓ ACKNOWLEDGE ALERT">
+                            </td>
+                        </tr>
+                    </form>
+                </table>
+                
+                <br>
+                
+                <!-- Alert Instructions -->
+                <table width="95%" align="center" border="0" cellpadding="8" bgcolor="#E6F0FA">
+                    <tr>
+                        <td>
+                            <font size="2"><b>📌 ALERT RESPONSE GUIDELINES:</b></font><br>
+                            <font size="2">• <b>CRITICAL (≤30 days):</b> Immediate action required - Transfer or prioritize dispensing within 7 days<br>
+                            • <b>WARNING (31-60 days):</b> Plan transfer or increase usage within 30 days<br>
+                            • <b>INFO (61-90 days):</b> Monitor and plan for redistribution</font>
+                        </td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+        
+        <!-- Footer -->
+        <tr>
+            <td bgcolor="#003366" align="center" height="50">
+                <font size="2" color="white">Uganda Medical Stores - Early Warning, Timely Action, Zero Expiry Waste</font>
+            </td>
+        </tr>
+        
+    </table>
+    
+</body>
+</html>
